@@ -1,0 +1,9 @@
+---
+- name: create kubernetes deployment
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+  - k8s:
+      state: present
+      src: files/centos-pod.yaml

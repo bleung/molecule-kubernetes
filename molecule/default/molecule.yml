@@ -1,0 +1,21 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: delegated
+  options:
+    ansible_connection_options:
+      connection: kubectl
+platforms:
+  - name: instance
+    image: docker.io/pycontribs/centos:7
+    pre_build_image: true
+provisioner:
+  name: ansible
+  inventory:
+    group_vars:
+      all:
+        connection: kubectl
+        ansible_conection: kubectl
+verifier:
+  name: ansible

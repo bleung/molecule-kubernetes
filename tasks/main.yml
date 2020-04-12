@@ -1,0 +1,6 @@
+---
+- debug:
+    msg: "hello world"
+- copy:
+    content: "Ansible was here"
+    dest: /tmp/touched_by_ansible
